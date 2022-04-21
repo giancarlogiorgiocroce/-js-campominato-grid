@@ -29,7 +29,7 @@ const button = document.querySelector("button");
 const container = document.querySelector(".container");
 // console.log(container);
 
-let livello = 100;
+let livello = 10; /*dinamico in base a difficolta*/
 
 
     // Logica
@@ -50,7 +50,14 @@ function inizia(){
 
 function creaCelleGrandi (doveCreare){
     const box = document.createElement("div");
-    box.className = "box-big";
+    box.classList.add("box", "box"+livello);
+    console.log(box);
+    box.append(numeroCasuale(livello));
     doveCreare.append(box);
     return box;
+}
+
+function numeroCasuale(num){
+    let numeroEstratto = Math.ceil(Math.random() * num);
+    return numeroEstratto;
 }

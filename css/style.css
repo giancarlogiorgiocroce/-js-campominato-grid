@@ -28,19 +28,40 @@ main{
     width: 90%;
     max-width: var(--grandezza);
     margin: 0 auto;
-    /* border: 1px solid white; */
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-wrap: wrap;
 }
 
-.box-big{
+.box{
+    border: 1px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.box10{ /*Diventerà box100*/
     width: calc(var(--grandezza) / 10);
     height: calc(var(--grandezza) / 10);
-    border: 1px solid white;
+}
+
+.box81{
+    width: calc(var(--grandezza) / 9);
+    height: calc(var(--grandezza) / 9);
+}
+
+.box49{
+    width: calc(var(--grandezza) / 7);
+    height: calc(var(--grandezza) / 7);
 }
 
 .active{
     background-color: teal;
 }
+
+/* span{
+    display: none;
+} */
