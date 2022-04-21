@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --grandezza: 800px;
+}
+
+body{
+    background-color: rgb(93, 55, 19);
+}
+
+header,
+footer{
+    background-color: bisque;
+    height: 5vh;
+}
+
+main{
+    height: 90vh;
+}
+
+.container{
+    width: 90%;
+    max-width: var(--grandezza);
+    margin: 0 auto;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.box-big{
+    width: calc(var(--grandezza) / 10);
+    height: calc(var(--grandezza) / 10);
+    border: 1px solid white;
+}
