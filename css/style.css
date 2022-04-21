@@ -5,21 +5,23 @@
 }
 
 :root{
-    --grandezza: 800px;
-}
-
-body{
-    background-color: rgb(93, 55, 19);
+    --grandezza: 650px;
 }
 
 header,
 footer{
     background-color: bisque;
-    height: 5vh;
+    height: 50px;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 main{
-    height: 90vh;
+    background-color: orange; 
 }
 
 .container{
@@ -37,4 +39,8 @@ main{
     width: calc(var(--grandezza) / 10);
     height: calc(var(--grandezza) / 10);
     border: 1px solid white;
+}
+
+.active{
+    background-color: teal;
 }
