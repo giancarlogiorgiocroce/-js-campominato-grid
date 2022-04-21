@@ -1,6 +1,6 @@
 /*
 
-L’utente indica un livelloDifficoltà di difficoltà in base al quale viene generata una griglia di gioco quadrata.
+L’utente indica un livelloSfida di difficoltà in base al quale viene generata una griglia di gioco quadrata.
 in cui ogni cella contiene un numero tra quelli compresi in un range:
 con difficoltà 1 => tra 1 e 100
 con difficoltà 2 => tra 1 e 81
@@ -17,32 +17,48 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 */
 
-/*
-0. Scegliere la difficoltà.
-1. Generare la griglia.
-2. Assegnare numeri alla griglia.
-*/
-
     // Variabili universali
-const button = document.querySelector("button");
+// const button = document.querySelector("button");
 // console.log(button);
 const container = document.querySelector(".container");
 // console.log(container);
 const arrayNumeri = [];
 
-let livelloDifficoltà = 100;
+// livelloSfida = document.getElementById("facile").value;
+// console.log(livelloSfida);
+// livelloSfida = document.getElementById("medio").value;
+// console.log(livelloSfida);
+// livelloSfida = document.getElementById("difficile").value;
+// console.log(livelloSfida);
 
 
-    // Logica
-// Non funziona!
-button.addEventListener('click', inizia());
-// Non funziona!
 
+
+// Logica
+const button = document.querySelector("#facile, #medio, #difficile");
+let livelloSfida = button.value;
+button.addEventListener("click", inizia);
+
+/*
+
+const facile = document.getElementById("facile");
+// livelloSfida = facile.value;
+facile.addEventListener("click", inizia);
+
+const medio = document.getElementById("medio");
+// livelloSfida = medio.value;
+medio.addEventListener("click", inizia);
+
+const difficile = document.getElementById("difficile");
+// livelloSfida = difficile.value;
+difficile.addEventListener("click", inizia);
+
+*/
 
     // Funzioni
 function inizia(){
 
-    for(let i = 1; i <= livelloDifficoltà; i++){
+    for(let i = 1; i <= livelloSfida; i++){
         const box = creaCelle(container);
         box.append(i);
 
@@ -57,7 +73,7 @@ function inizia(){
 
 function creaCelle (doveCreare){
     const box = document.createElement("div");
-    box.classList.add("box", "box"+livelloDifficoltà);
+    box.classList.add("box", "box"+livelloSfida);
     doveCreare.append(box);
     return box;
 }
