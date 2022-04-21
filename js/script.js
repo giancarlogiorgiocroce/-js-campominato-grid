@@ -17,46 +17,35 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 */
 
-    // Variabili universali
-// const button = document.querySelector("button");
-// console.log(button);
+// Variabili universali
 const container = document.querySelector(".container");
-// console.log(container);
+
 const arrayNumeri = [];
 
-// livelloSfida = document.getElementById("facile").value;
-// console.log(livelloSfida);
-// livelloSfida = document.getElementById("medio").value;
-// console.log(livelloSfida);
-// livelloSfida = document.getElementById("difficile").value;
-// console.log(livelloSfida);
+// const lvFacile = document.getElementById("facile");
+// const lvMedio = document.getElementById("medio");
+// const lvDifficile = document.getElementById("difficile");
 
+const button = document.querySelector('#btn');
 
+// const livello = document.querySelector('#livello');
 
+// let livelloSfida;
 
+let livelloSfida = 100;
+
+    
+    
 // Logica
-const button = document.querySelector("#facile, #medio, #difficile");
-let livelloSfida = button.value;
 button.addEventListener("click", inizia);
+// lvFacile.addEventListener("click", inizia);
+// lvMedio.addEventListener("click", inizia);
+// lvDifficile.addEventListener("click", inizia);
 
-/*
 
-const facile = document.getElementById("facile");
-// livelloSfida = facile.value;
-facile.addEventListener("click", inizia);
-
-const medio = document.getElementById("medio");
-// livelloSfida = medio.value;
-medio.addEventListener("click", inizia);
-
-const difficile = document.getElementById("difficile");
-// livelloSfida = difficile.value;
-difficile.addEventListener("click", inizia);
-
-*/
-
-    // Funzioni
+// Funzioni
 function inizia(){
+
 
     for(let i = 1; i <= livelloSfida; i++){
         const box = creaCelle(container);
