@@ -43,7 +43,7 @@ main{
     color: white;
 }
 
-.box10{ /*Diventerà box100*/
+.box100{ /*Diventerà box100*/
     width: calc(var(--grandezza) / 10);
     height: calc(var(--grandezza) / 10);
 }

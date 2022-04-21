@@ -1,6 +1,6 @@
 /*
 
-L’utente indica un livello di difficoltà in base al quale viene generata una griglia di gioco quadrata.
+L’utente indica un livelloDifficoltà di difficoltà in base al quale viene generata una griglia di gioco quadrata.
 in cui ogni cella contiene un numero tra quelli compresi in un range:
 con difficoltà 1 => tra 1 e 100
 con difficoltà 2 => tra 1 e 81
@@ -28,8 +28,9 @@ const button = document.querySelector("button");
 // console.log(button);
 const container = document.querySelector(".container");
 // console.log(container);
+const arrayNumeri = [];
 
-let livello = 10; /*dinamico in base a difficolta*/
+let livelloDifficoltà = 100;
 
 
     // Logica
@@ -41,23 +42,22 @@ button.addEventListener('click', inizia());
     // Funzioni
 function inizia(){
 
-    for(let i = 1; i <= livello /*dinamico in base a difficolta*/; i++){
-        creaCelleGrandi(container);
-        console.log(i);
+    for(let i = 1; i <= livelloDifficoltà; i++){
+        const box = creaCelle(container);
+        box.append(i);
+
+
+        box.addEventListener('click', function(){
+            this.classList.add('active');
+        })
+
     }
 
 }
 
-function creaCelleGrandi (doveCreare){
+function creaCelle (doveCreare){
     const box = document.createElement("div");
-    box.classList.add("box", "box"+livello);
-    console.log(box);
-    box.append(numeroCasuale(livello));
+    box.classList.add("box", "box"+livelloDifficoltà);
     doveCreare.append(box);
     return box;
-}
-
-function numeroCasuale(num){
-    let numeroEstratto = Math.ceil(Math.random() * num);
-    return numeroEstratto;
 }
