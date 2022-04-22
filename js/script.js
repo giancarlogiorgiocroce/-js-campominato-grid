@@ -19,33 +19,22 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 // Variabili universali
 const container = document.querySelector(".container");
+const button = document.querySelector('#btn');
+const livello = document.querySelector('#livello');
 
 const arrayNumeri = [];
+let livelloSfida;
 
-// const lvFacile = document.getElementById("facile");
-// const lvMedio = document.getElementById("medio");
-// const lvDifficile = document.getElementById("difficile");
 
-const button = document.querySelector('#btn');
-
-// const livello = document.querySelector('#livello');
-
-// let livelloSfida;
-
-let livelloSfida = 100;
-
-    
-    
 // Logica
+livello.addEventListener("change", assegnaLv);
 button.addEventListener("click", inizia);
-// lvFacile.addEventListener("click", inizia);
-// lvMedio.addEventListener("click", inizia);
-// lvDifficile.addEventListener("click", inizia);
 
 
 // Funzioni
 function inizia(){
-
+    
+    assegnaLv();
 
     for(let i = 1; i <= livelloSfida; i++){
         const box = creaCelle(container);
@@ -58,6 +47,10 @@ function inizia(){
 
     }
 
+}
+
+function assegnaLv(){
+    livelloSfida = livello.options[livello.selectedIndex].value;
 }
 
 function creaCelle (doveCreare){

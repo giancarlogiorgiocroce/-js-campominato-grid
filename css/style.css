@@ -43,7 +43,7 @@ main{
     color: white;
 }
 
-.box100{ /*Diventerà box100*/
+.box100{
     width: calc(var(--grandezza) / 10);
     height: calc(var(--grandezza) / 10);
 }
@@ -61,7 +61,3 @@ main{
 .active{
     background-color: teal;
 }
-
-/* span{
-    display: none;
-} */
