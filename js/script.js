@@ -33,7 +33,7 @@ button.addEventListener("click", inizia);
 
 // Funzioni
 function inizia(){
-    
+
     assegnaLv();
 
     for(let i = 1; i <= livelloSfida; i++){
@@ -44,9 +44,8 @@ function inizia(){
         box.addEventListener('click', function(){
             this.classList.add('active');
         })
-
     }
-
+    
 }
 
 function assegnaLv(){
